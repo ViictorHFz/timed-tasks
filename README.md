@@ -1,6 +1,6 @@
 ## Timer para Tarefas
 
-Working on...
+Working in progress...
 
 ## Available Scripts
 
