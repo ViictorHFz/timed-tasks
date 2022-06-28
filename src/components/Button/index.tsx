@@ -1,11 +1,13 @@
 import React from 'react';
 import style from './Button.module.scss';
 
-class Button extends React.Component {
+//No implicity children Props on React 18...
+
+class Button extends React.Component <{children?: React.ReactNode}> {
     render() {
         return(
             <button className={style.botao}>
-                Adicionar Tarefa
+                {this.props.children}
             </button>
         )
     }
