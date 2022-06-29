@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "./item";
+import Item from "./Item";
 import style from './Lista.module.scss';
 
 function Lista() {
@@ -25,7 +25,9 @@ function Lista() {
         {tarefas.map((item, index) => (
           <Item
             key={index}
-            {...item} //spread operator para fazer destructring do objeto item  (array de tarefas)
+            {...item} //spread operator para fazer desestruturação (ou destructuring) do objeto item (array de tarefas)
+            //tarefa={item.tarefa}
+            //tempo={item.tempo}
           />
         ))}
       </ul>
