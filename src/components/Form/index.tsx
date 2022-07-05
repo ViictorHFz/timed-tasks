@@ -1,8 +1,9 @@
 import React from "react";
+import { ITarefa } from "../../types/tarefas";
 import Button from "../Button";
 import style from "./Form.module.scss";
 
-class Formulario extends React.Component {
+class Formulario extends React.Component<{ setTarefas: React.Dispatch<React.SetStateAction<ITarefa[]>> }> {
   state = {
     tarefa: "",
     tempo: "00:00",
@@ -10,7 +11,7 @@ class Formulario extends React.Component {
 
   adicionarTarefa(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    console.log('state:', this.state)
+    this.props.setTarefas((tarefasAntigas) => [...tarefasAntigas, { ...this.state }])
   }
 
   render() {
@@ -44,7 +45,7 @@ class Formulario extends React.Component {
           />
         </div>
 
-        <Button>Adicionar</Button>
+        <Button type="submit">Adicionar</Button>
       </form>
     );
   }
