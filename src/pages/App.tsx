@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Cronometro from "../components/Cronometro";
 import Formulario from "../components/Form";
 import Lista from "../components/Lista";
-import { ITarefa } from "../types/tarefas";
+import { ITarefa } from "../types/ITarefa";
 import style from "./App.module.scss";
 
 function App() {
