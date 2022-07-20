@@ -1,16 +1,16 @@
 import React from "react";
-import style from "./Relogio.module.scss"
+import style from "./Relogio.module.scss";
 
 interface Props {
-  tempo: number | undefined
+  tempo: number | undefined;
 }
 
-export default function Relogio({ tempo = 0}: Props) {
+export default function Relogio({ tempo = 0 }: Props) {
   const minutos = Math.floor(tempo / 60);
-  const [minutosDezena, minutoUnidade] = String(minutos).padStart(2, '0')
+  const [minutosDezena, minutoUnidade] = String(minutos).padStart(2, "0");
 
   const segundos = tempo % 60;
-  const [segundosDezena, segundosUnidade] = String(segundos).padStart(2, '0')
+  const [segundosDezena, segundosUnidade] = String(segundos).padStart(2, "0");
   return (
     <>
       <span className={style.relogioNumero}>{minutosDezena}</span>
